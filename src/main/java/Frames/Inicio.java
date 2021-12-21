@@ -36,6 +36,8 @@ public class Inicio extends javax.swing.JFrame {
     btnEliminar = new com.icm.components.metro.ButtonMenuMetroICM();
     btnAgregar = new com.icm.components.metro.ButtonMenuMetroICM();
     btnModificar = new com.icm.components.metro.ButtonMenuMetroICM();
+    btnM_Venta = new com.icm.components.metro.ButtonMenuMetroICM();
+    btnN_Venta = new com.icm.components.metro.ButtonMenuMetroICM();
     
         // hilo de la hora -- llamo ala clase hora
 		hora hilo = new hora(lblhora);
@@ -56,8 +58,6 @@ public class Inicio extends javax.swing.JFrame {
     private void initComponents() {
 
         panel_1 = new org.edisoncor.gui.panel.PanelCurves();
-        btnM_Venta = new com.icm.components.metro.ButtonMenuMetroICM();
-        btnN_Venta1 = new com.icm.components.metro.ButtonMenuMetroICM();
         lblUsuario = new org.edisoncor.gui.label.LabelTask();
         panel_2 = new org.edisoncor.gui.panel.PanelTranslucido();
         btnUsuarios = new org.edisoncor.gui.button.ButtonTask();
@@ -77,22 +77,6 @@ public class Inicio extends javax.swing.JFrame {
 
         panel_1.setFocusable(false);
         panel_1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnM_Venta.setBackground(java.awt.Color.orange);
-        btnM_Venta.setForeground(new java.awt.Color(0, 0, 0));
-        btnM_Venta.setIcon(new javax.swing.ImageIcon("C:\\Users\\snayd\\Documents\\Proyectos Netbeans\\Libreria\\imagenes\\carro(1).png")); // NOI18N
-        btnM_Venta.setText("Modificar Venta");
-        btnM_Venta.setFocusable(false);
-        btnM_Venta.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        panel_1.add(btnM_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 240, 180, 170));
-
-        btnN_Venta1.setBackground(new java.awt.Color(51, 153, 255));
-        btnN_Venta1.setIcon(new javax.swing.ImageIcon("C:\\Users\\snayd\\Documents\\Proyectos Netbeans\\Libreria\\imagenes\\carro(1).png")); // NOI18N
-        btnN_Venta1.setText("Nueva Venta");
-        btnN_Venta1.setFocusable(false);
-        btnN_Venta1.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
-        panel_1.add(btnN_Venta1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 180, 170));
-
         getContentPane().add(panel_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 0, 1120, 740));
 
         lblUsuario.setIcon(new javax.swing.ImageIcon("C:\\Users\\snayd\\Documents\\Proyectos Netbeans\\Libreria\\imagenes\\usuario.png")); // NOI18N
@@ -191,30 +175,42 @@ public class Inicio extends javax.swing.JFrame {
 
 	public String nombre(int mes) {
 		switch (mes) {
-		case 0:
-			return "Enero";
-		case 1:
-			return "Febrero";
-		case 2:
-			return "Marzo";
-		case 3:
-			return "Abril";
-		case 4:
-			return "Mayo";
-		case 5:
-			return "Junio";
-		case 6:
-			return "Julio";
-		case 7:
-			return "Agosto";
-		case 8:
-			return "Septiembre";
-		case 9:
-			return "Octubre";
-		case 10:
-			return "Noviembre";
-		case 11:
-			return "Diciembre";
+		case 0 -> {
+                    return "Enero";
+            }
+		case 1 -> {
+                    return "Febrero";
+            }
+		case 2 -> {
+                    return "Marzo";
+            }
+		case 3 -> {
+                    return "Abril";
+            }
+		case 4 -> {
+                    return "Mayo";
+            }
+		case 5 -> {
+                    return "Junio";
+            }
+		case 6 -> {
+                    return "Julio";
+            }
+		case 7 -> {
+                    return "Agosto";
+            }
+		case 8 -> {
+                    return "Septiembre";
+            }
+		case 9 -> {
+                    return "Octubre";
+            }
+		case 10 -> {
+                    return "Noviembre";
+            }
+		case 11 -> {
+                    return "Diciembre";
+            }
 		}
 		return "Error";
 	}
@@ -305,6 +301,21 @@ public class Inicio extends javax.swing.JFrame {
         
         panel_1.removeAll();
         panel_1.repaint();
+        
+        btnM_Venta.setBackground(java.awt.Color.orange);
+        btnM_Venta.setForeground(new java.awt.Color(0, 0, 0));
+        btnM_Venta.setIcon(new javax.swing.ImageIcon("C:\\Users\\snayd\\Documents\\Proyectos Netbeans\\Libreria\\imagenes\\carro(1).png")); // NOI18N
+        btnM_Venta.setText("Modificar Venta");
+        btnM_Venta.setFocusable(false);
+        btnM_Venta.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        panel_1.add(btnM_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 240, 180, 170));
+
+        btnN_Venta.setBackground(new java.awt.Color(51, 153, 255));
+        btnN_Venta.setIcon(new javax.swing.ImageIcon("C:\\Users\\snayd\\Documents\\Proyectos Netbeans\\Libreria\\imagenes\\carro(1).png")); // NOI18N
+        btnN_Venta.setText("Nueva Venta");
+        btnN_Venta.setFocusable(false);
+        btnN_Venta.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
+        panel_1.add(btnN_Venta, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 240, 180, 170));
     }//GEN-LAST:event_btnVentasActionPerformed
 
     
@@ -345,14 +356,14 @@ public class Inicio extends javax.swing.JFrame {
         });
     }
     
-    private com.icm.components.metro.ButtonMenuMetroICM btnAgregar;
-    private com.icm.components.metro.ButtonMenuMetroICM btnEliminar;
-    private com.icm.components.metro.ButtonMenuMetroICM btnModificar;
+    private final com.icm.components.metro.ButtonMenuMetroICM btnAgregar;
+    private final com.icm.components.metro.ButtonMenuMetroICM btnEliminar;
+    private final com.icm.components.metro.ButtonMenuMetroICM btnModificar;
+    private final com.icm.components.metro.ButtonMenuMetroICM btnM_Venta;
+    private final com.icm.components.metro.ButtonMenuMetroICM btnN_Venta;
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private com.icm.components.metro.ButtonMenuMetroICM btnM_Venta;
-    private com.icm.components.metro.ButtonMenuMetroICM btnN_Venta1;
     private org.edisoncor.gui.button.ButtonTask btnReportes;
     private org.edisoncor.gui.button.ButtonTask btnSalir;
     private org.edisoncor.gui.button.ButtonTask btnUsuarios;
